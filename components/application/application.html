@@ -1,0 +1,75 @@
+<section class="application section-paper section-pad" id="application">
+  <div class="section-kicker">03 / APPLICATION</div>
+  <div class="application__intro">
+    <h2>내가 원하는 모습은<br><em>어떤 스타일로 표현할 수 있을까요?</em></h2>
+    <p>좋아하는 것, 자주 입는 것,<br>그리고 닮고 싶은 분위기까지.<br>하나씩 살펴보며 막연했던 취향을 나만의 스타일로 구체화합니다.</p>
+  </div>
+
+  <form class="application-form" id="application-form" novalidate>
+    <div class="form-card">
+      <p class="form-card__title">기본 정보</p>
+      <div class="field-grid">
+        <label class="field-group"><span>이름 *</span><input type="text" name="name" placeholder="이름을 입력해주세요." required></label>
+        <label class="field-group"><span>연락처 *</span><input type="tel" name="phone" inputmode="numeric" maxlength="13" placeholder="010-0000-0000" required></label>
+        <label class="field-group field-group--wide"><span>거주지역 *</span><input type="text" name="location" placeholder="예) 서울 강남구" required></label>
+        <label class="field-group"><span>희망 상담일 *</span><input type="date" name="preferred_date" required></label>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <p class="form-card__title">상담 가능 시간</p>
+      <div class="field-group field-group--wide">
+        <span>상담 통화 가능 요일 *</span>
+        <div class="choice-grid choice-grid--days">
+          <label class="choice-card"><input type="checkbox" name="days" value="월"><span>월</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="화"><span>화</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="수"><span>수</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="목"><span>목</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="금"><span>금</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="토"><span>토</span></label>
+          <label class="choice-card"><input type="checkbox" name="days" value="일"><span>일</span></label>
+        </div>
+      </div>
+      <div class="field-group field-group--wide">
+        <span>상담 통화 가능 시간 *</span>
+        <input type="text" name="time_preference" placeholder="예) 평일 19시 이후 / 월·수 18시 이후 / 주말 오전" required>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <p class="form-card__title">상담 내용</p>
+      <label class="field-group field-group--wide">
+        <span>현재 고민과 상담 요청 *</span>
+        <textarea name="message" rows="5" placeholder="현재 스타일이나 이미지에 대해 어떤 고민이 있으신가요?
+상담받고 싶은 내용을 자유롭게 적어주세요." required></textarea>
+      </label>
+    </div>
+
+    <div class="form-consent">
+      <label class="consent"><input type="checkbox" name="consent" required><span>[필수] 개인정보 수집·이용에 동의합니다.</span></label>
+      <details class="consent-detail">
+        <summary>개인정보 수집·이용 안내 보기</summary>
+        <p>목적: 상담 접수·일정 조율·문의 응대<br>
+        필수 항목: 선택 서비스, 이름, 연락처, 거주지역, 희망 상담일, 상담 통화 가능 요일·시간, 상담 내용(선택 서비스별 사전 질문 응답 포함)<br>
+        자동 생성: 접수·동의 시각, 동의 버전, 처리 상태<br>
+        보안 처리: 비정상 요청 제한을 위해 IP 주소의 비가역 해시값을 생성<br>
+        보유 기간: 상담 정보는 신청일로부터 1년, 해시값은 생성 후 48시간(각 기간 경과 후 다음 사이트 활동 또는 관리자 점검 시 삭제)<br>
+        동의하지 않으면 상담 예약 신청을 접수할 수 없습니다.</p>
+      </details>
+      <a class="privacy-link" href="https://sentistyle.com/privacy" target="_blank" rel="noopener noreferrer">개인정보처리방침 전문 보기 ↗</a>
+    </div>
+
+    <div class="form-actions">
+      <button class="button button--dark button--submit" type="submit">상담 예약 신청하기 <span aria-hidden="true">↗</span></button>
+    </div>
+    <p class="form-note">만 19세 미만은 상담 예약을 신청할 수 없습니다.</p>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+
+  <div class="final-cta">
+    <h3>나에게 맞는 스타일은<br>어떤 모습일까요?</h3>
+    <p class="final-cta__lead">옷을 더 사기 전에,<br>나를 먼저 알아보세요.</p>
+    <a class="button button--dark" href="#application">상담 예약 신청 보내기 <span aria-hidden="true">↗</span></a>
+    <p class="form-note">만 19세 미만은 상담 예약을 신청할 수 없습니다.</p>
+  </div>
+</section>
