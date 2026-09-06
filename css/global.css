@@ -3,28 +3,28 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Pretendard';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Pretendard';
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Pretendard';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
 }
 
 :root {
@@ -49,8 +49,8 @@
   --font-editorial: 'Cormorant Garamond', Georgia, serif;
   --max-width: 1440px;
   --page-gutter: clamp(1.25rem, 2.2vw, 3.25rem);
-  --section-pad-y: clamp(4.5rem, 8vw, 8rem);
-  --hero-title: clamp(3.1rem, 5vw, 7.25rem);
+  --section-pad-y: clamp(3.25rem, 5vw, 5.5rem);
+  --hero-title: clamp(2.6rem, 4.2vw, 5.5rem);
   --title-lg: clamp(2.6rem, 4vw, 5.75rem);
   --title-md: clamp(2rem, 3vw, 3.6rem);
   --body-md: clamp(0.9rem, 1.3vw, 1.15rem);
@@ -199,9 +199,9 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
 .menu-toggle, .menu-panel { display: none; }
 
 .hero {
-  min-height: min(900px, 100vh);
+  min-height: auto;
   overflow: hidden;
-  padding: 8.5rem var(--page-gutter) 3rem;
+  padding: 7.25rem var(--page-gutter) 3.5rem;
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 480px);
@@ -224,7 +224,7 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
   z-index: 1;
 }
 .hero__content {
-  margin-top: clamp(2rem, 5vw, 5rem);
+  margin-top: clamp(1rem, 2.5vw, 2.5rem);
   max-width: 700px;
   position: relative;
   z-index: 2;
@@ -254,11 +254,11 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
   align-self: end;
   justify-self: end;
   width: min(100%, 480px);
-  min-height: min(62vh, 680px);
+  min-height: 0;
   position: relative;
   z-index: 1;
 }
-.hero__image { height: 100%; min-height: 420px; object-fit: cover; width: 100%; }
+.hero__image { height: auto; max-height: 560px; object-fit: cover; width: 100%; }
 .hero__image-label {
   bottom: -26px;
   color: var(--dark-muted);
