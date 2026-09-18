@@ -1,0 +1,9 @@
+document.addEventListener('componentsloaded', () => {
+  document.querySelectorAll('.faq details').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) document.querySelectorAll('.faq details[open]').forEach((other) => {
+        if (other !== item) other.removeAttribute('open');
+      });
+    });
+  });
+});
