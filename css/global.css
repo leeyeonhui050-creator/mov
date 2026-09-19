@@ -349,7 +349,15 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
 }
 
 .process { position: relative; }
-.process__kicker { margin-bottom: 1.4rem; }
+.process__kicker {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0 0 5rem;
+  color: var(--ink);
+}
 .process__steps {
   display: grid;
   gap: 1.25rem;
@@ -593,4 +601,86 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+
+/* REAL REVIEW - Google Sheets */
+.review__layout { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 7rem); align-items: start; }
+.review__list { display: grid; gap: 1rem; }
+.review-card { border-top: 1px solid var(--line); padding: 1.4rem 0 1.6rem; }
+.review-card__label { display: block; font-family: var(--font-editorial); font-size: 12pt; letter-spacing: .08em; margin-bottom: 1.2rem; }
+.review-card__text { margin: 0 0 1.1rem; font-size: var(--body-md); line-height: 1.65; word-break: keep-all; }
+.review-card footer { font-family: var(--font-editorial); font-size: 10pt; letter-spacing: .06em; color: var(--muted); }
+.review__empty { margin: 0; color: var(--muted); font-size: var(--body-sm); }
+@media (max-width: 760px) { .review__layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+
+/* =========================================================
+   REAL REVIEW
+   ========================================================= */
+
+.real-review {
+  margin: 0;
+}
+
+
+.real-review__label {
+  color: var(--muted);
+  display: block;
+  font-family: var(--font-editorial);
+  font-size: 12pt;
+  letter-spacing: .09em;
+  margin-bottom: 2rem;
+}
+
+
+.real-review__content {
+  max-width: 620px;
+}
+
+
+.real-review__text {
+  color: var(--ink);
+  font-family: var(--font-korean);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+  word-break: keep-all;
+  white-space: pre-line;
+}
+
+
+.real-review__name {
+  color: var(--muted);
+  font-family: var(--font-editorial);
+  font-size: 12pt;
+  letter-spacing: .08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   REAL REVIEW - MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .real-review {
+    margin-top: 3rem;
+  }
+
+
+  .real-review__text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+
+  .real-review__label,
+  .real-review__name {
+    font-size: 11pt;
+  }
+
 }
