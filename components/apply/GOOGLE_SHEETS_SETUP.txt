@@ -1,0 +1,32 @@
+MOV APPLICATION — Google Sheets 연결
+
+구성
+- components/apply/index.html : 신청 폼
+- components/apply/style.css : MOV 디자인
+- components/apply/script.js : 폼 검증 + Google Apps Script 전송
+- components/apply/google-apps-script/Code.gs : Google Sheets 저장용 Apps Script
+
+Google Sheets 연결 방법
+1. Google Drive에서 새 Google Apps Script 프로젝트를 만듭니다.
+2. Code.gs 내용을 통째로 붙여넣습니다.
+3. 저장합니다.
+4. 배포 → 새 배포 → 유형: 웹 앱을 선택합니다.
+5. 실행 주체: 나
+6. 액세스 권한: 모든 사용자
+7. 배포 후 나온 /exec 주소를 복사합니다.
+8. components/apply/script.js의
+   GOOGLE_APPS_SCRIPT_URL = "";
+   큰따옴표 안에 /exec 주소를 넣습니다.
+9. 저장 후 사이트에 업로드합니다.
+
+중요
+- 이 Apps Script는 별도의 스프레드시트 ID를 코드에 직접 넣지 않습니다.
+- 첫 신청이 들어오면 'MOV 스타일 체험 신청서'라는 스프레드시트를 자동 생성합니다.
+- 이후 신청은 같은 스프레드시트의 applications 시트에 계속 누적됩니다.
+- 신청 항목은 A~L 열에 저장됩니다. 마지막 L열은 신청일시입니다.
+
+메인 페이지 신청 버튼
+메인 index.html에서 신청 버튼을 아래처럼 연결하면 됩니다.
+./components/apply/index.html
+
+기존 components/application 폴더는 건드리지 않습니다.

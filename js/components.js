@@ -5,10 +5,8 @@ const components = [
   ['consulting-slot', 'components/consulting/consulting.html'],
   ['process-slot', 'components/process/process.html'],
   ['application-slot', 'components/application/application.html'],
-  ['personalization-slot', 'components/personalization/personalization.html'],
-  ['before-after-slot', 'components/before-after/before-after.html'],
   ['review-slot', 'components/review/review.html'],
-  ['philosophy-slot', 'components/philosophy/philosophy.html'],
+  ['instagram-slot', 'components/instagram/instagram.html'],
   ['faq-slot', 'components/faq/faq.html'],
   ['footer-slot', 'components/footer/footer.html'],
 ];

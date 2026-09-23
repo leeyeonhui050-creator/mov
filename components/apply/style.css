@@ -1,0 +1,179 @@
+/* 신청 페이지는 메인 MOV의 헤더/타이포 시스템을 그대로 사용합니다. (css/global.css .site-header 참고) */
+
+.apply-page-body {
+  min-width: 320px;
+}
+
+.apply-page {
+  width: min(var(--max-width), calc(100% - (var(--page-gutter) * 2)));
+  margin: 0 auto;
+  padding: 9.5rem 0 8.5rem;
+}
+
+.apply-intro {
+  max-width: 760px;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.apply-intro .eyebrow {
+  margin: 0 0 1.25rem;
+}
+
+.apply-intro .section-number {
+  margin: 0 0 1.75rem;
+}
+
+.apply-intro h1 {
+  margin: 0;
+  font-family: var(--font-korean);
+  font-size: clamp(2.7rem, 5.5vw, 5.2rem);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  font-weight: 600;
+}
+
+.intro-copy {
+  margin: 1.8rem 0 0;
+  color: var(--muted);
+  font-size: var(--body-md);
+  line-height: 1.85;
+}
+
+.apply-form-wrap {
+  max-width: 820px;
+  margin-left: auto;
+}
+
+#applicationForm {
+  border-top: 1px solid var(--ink);
+}
+
+.form-field {
+  padding: 1.75rem 0 1.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: .75rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-field label span { color: var(--color-rose); }
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  padding: .7rem 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-bottom-color: var(--ink);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #aaa; }
+
+.field-help {
+  margin: .55rem 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.form-notice {
+  margin-top: 1.8rem;
+  padding: 1.2rem 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.form-notice p { margin: 0; }
+
+.submit-button {
+  width: 100%;
+  margin-top: 1.2rem;
+  min-height: 62px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+  font-family: var(--font-editorial);
+  font-size: var(--button-size);
+  font-weight: 600;
+  letter-spacing: .12em;
+  transition: background .25s ease, color .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.submit-button:hover {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled { opacity: .5; cursor: wait; }
+
+.form-message {
+  min-height: 22px;
+  margin: 1.1rem 0 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+.form-message.is-error { color: #b55; }
+.form-message.is-success { color: var(--ink); }
+
+.apply-footer {
+  width: min(var(--max-width), calc(100% - (var(--page-gutter) * 2)));
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 1023px) {
+  .apply-page { padding-top: 8.5rem; }
+}
+
+@media (max-width: 767px) {
+  .apply-page {
+    padding: 6.5rem 1.25rem 5.5rem;
+    width: 100%;
+  }
+  .apply-intro { margin-bottom: 4rem; }
+  .apply-intro h1 {
+    font-size: clamp(2.35rem, 10vw, 3.6rem);
+    line-height: 1.12;
+  }
+  .intro-copy { font-size: .9rem; }
+  .form-field { padding: 1.4rem 0 1.55rem; }
+  .apply-footer {
+    width: calc(100% - 2.5rem);
+    flex-direction: column;
+    gap: .5rem;
+  }
+}

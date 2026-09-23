@@ -18,6 +18,59 @@ const REVIEW_API_URL =
 
 /*
  * =========================================================
+ * TOP 버튼
+ *
+ * index.html에 정적으로 존재하는 버튼이므로
+ * 컴포넌트 로딩(componentsloaded)을 기다릴 필요가 없습니다.
+ * =========================================================
+ */
+
+(() => {
+
+  const topButton =
+    document.querySelector('[data-top-button]');
+
+
+  if (!topButton) {
+    return;
+  }
+
+
+  const toggleTopButton = () => {
+
+    topButton.classList.toggle(
+      'is-visible',
+      window.scrollY > 400
+    );
+
+  };
+
+
+  toggleTopButton();
+
+
+  window.addEventListener(
+    'scroll',
+    toggleTopButton,
+    { passive: true }
+  );
+
+
+  topButton.addEventListener('click', () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  });
+
+})();
+
+
+
+/*
+ * =========================================================
  * COMPONENTS LOADED
  * =========================================================
  */
@@ -78,6 +131,44 @@ document.addEventListener('componentsloaded', () => {
         });
 
       });
+
+  }
+
+
+
+  /*
+   * =======================================================
+   * 헤더 스크롤 고정
+   *
+   * 기존 CSS(.site-header.is-scrolled)는 이미 준비되어 있었으나
+   * 이를 토글하는 스크롤 리스너가 없어 항상 absolute로만 동작했습니다.
+   * =======================================================
+   */
+
+  const siteHeader =
+    document.querySelector('[data-header]');
+
+
+  if (siteHeader) {
+
+    const updateHeaderScrolled = () => {
+
+      siteHeader.classList.toggle(
+        'is-scrolled',
+        window.scrollY > 4
+      );
+
+    };
+
+
+    updateHeaderScrolled();
+
+
+    window.addEventListener(
+      'scroll',
+      updateHeaderScrolled,
+      { passive: true }
+    );
 
   }
 
