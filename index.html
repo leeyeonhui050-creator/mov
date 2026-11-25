@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="keywords" content="모브, 모브 컨설팅, 스타일 컨설팅, 이미지 컨설팅, MOV, 퍼스널 이미지 스타일, 퍼스널컬러">
   <meta name="naver-site-verification" content="98a8eb7955b00440aecf83470c7d2e6aebd0e604" />
+  <meta name="google-site-verification" content="w7S1USUQ15w9SkTX4L1LeK21K7jadj3GdFYM9jM17FY" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F8F6F2">
   <meta name="description" content="모브(MOV)는 퍼스널컬러와 개인의 고유한 매력을 발견하고 어울리는 스타일을 제안하는 퍼스널 스타일 컨설팅 브랜드입니다.">
@@ -52,10 +53,65 @@
   <link rel="stylesheet" href="./css/responsive.css?v=5">
 </head>
 <body>
-  <div id="header-slot"></div>
+  <div id="header-slot">
+    <header class="site-header" data-header>
+      <a class="brand-mark" href="#hero" aria-label="[MOV] 홈">
+        <img src="./img/logo.png" alt="[MOV]">
+      </a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#problem">ABOUT</a>
+        <a href="#consulting" >CONSULTING</a>
+        <a href="#process">PROCESS</a>
+        <a href="#review">REVIEW</a>
+        <a href="#instagram">INSTAGRAM</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="../components/apply/index.html">예약 신청 <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+      <div class="menu-panel" data-menu-panel>
+        <a href="#problem">ABOUT</a>
+        <a href="#consulting">CONSULTING</a>
+        <a href="#process">PROCESS</a>
+        <a href="#review">REVIEW</a>
+        <a href="#instagram">INSTAGRAM</a>
+        <a href="#faq">FAQ</a>
+        <a class="menu-panel__cta" href="../components/apply/index.html">상담 예약 신청하기 <span>↗</span></a>
+      </div>
+    </header>
+  </div>
   <main>
-    <div id="hero-slot"></div>
-    <div id="problem-slot"><p>모브(MOV)는 퍼스널컬러와 개인의 고유한 매력을 발견하고, 어울리는 스타일을 제안하는 퍼스널 스타일 컨설팅 브랜드입니다.</p></div>
+    <div id="hero-slot">
+      <section class="hero" id="hero">
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="hero__topline"><span>PERSONAL STYLE CONSULTING</span><span>SEOUL / ONLINE</span></div>
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow">KNOW YOURSELF, FIRST.</p>
+          <h1 class="hero__title">스타일은 옷에서 시작하지 않습니다.<br><span>나를 이해하는 것에서 시작됩니다.</span></h1>
+          <p class="hero__description">당신의 취향과 성향, 생활 방식과 원하는 이미지까지 살펴<br>지금의 나에게 가장 자연스러운 스타일을 찾아드립니다.</p>
+          <a class="button button--light" href="#application">상담 예약 신청하기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero__image-wrap">
+          <img class="hero__image" src="../../img/main2.jpg" alt="이미지 오류" fetchpriority="high">
+        </div>
+      </section>
+    </div>
+    <div id="problem-slot">
+      <section class="about section-light section-pad" id="problem">
+        <div class="section-kicker">01 / ABOUT</div>
+        <div class="about__layout">
+          <p class="display-copy">PERSONAL IS STYLE</p>
+          <div class="about__body">
+            <p class="lead-copy">모두에게 같은 스타일이 어울리는 것은 아닙니다.</p>
+            <p>누군가에게 잘 어울리는 옷이<br>나에게도 잘 어울리는 것은 아니니까요.</p>
+            <p>체형이 다르고, 분위기가 다르고,<br>좋아하는 것도, 살아가는 방식도 다르니까요.</p>
+            <p>그래서 우리는 먼저 나를 이해하고,<br>그 안에서 나에게 어울리는 스타일을 찾아갑니다.</p>
+            <p>모브(MOV)는 퍼스널컬러와 개인의 고유한 매력을 발견하고,<br>어울리는 스타일을 제안하는 퍼스널 스타일 컨설팅 브랜드입니다.</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <div id="consulting-slot"></div>
     <div id="process-slot"></div>
     <div id="application-slot"></div>
