@@ -84,4 +84,16 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  .popup-container {
+    max-width: calc(100% - 20px);
+  }
+  .popup-actions {
+    gap: 8px;
+    padding: 12px;
+  }
+  .popup-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
 }

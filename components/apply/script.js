@@ -98,7 +98,7 @@ form.addEventListener("submit", async (event) => {
 
     setTimeout(() => {
   window.location.href = "../../index.html";
-}, 2000);
+}, 2000);d
 
   } catch (error) {
 

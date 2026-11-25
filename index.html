@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="MOV, 모브, 퍼스널 스타일 컨설팅, 스타일 컨설팅, 이미지 컨설팅, 퍼스널 스타일링, 퍼스널컬러">
+  <meta name="keywords" content="모브, 모브 컨설팅, 스타일 컨설팅, 이미지 컨설팅, MOV, 퍼스널 이미지 스타일, 퍼스널컬러">
   <meta name="naver-site-verification" content="98a8eb7955b00440aecf83470c7d2e6aebd0e604" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F8F6F2">
@@ -39,8 +39,23 @@
   <button type="button" class="top-button" data-top-button aria-label="맨 위로 이동">
     <span aria-hidden="true">▲</span> TOP
   </button>
+
+  <!-- 팝업 -->
+  <div class="popup-overlay" data-popup-overlay aria-hidden="true">
+    <div class="popup-container" data-popup-container>
+      <a href="https://smore.im/form/EfgZpL2HZR" class="popup-link" data-popup-link aria-label="팝업 이미지 링크" target="_blank" rel="noopener noreferrer">
+        <img src="./event/perfume.jpg" alt="이벤트 이미지" class="popup-image">
+      </a>
+      <div class="popup-actions">
+        <button type="button" class="popup-btn popup-btn-close" data-popup-btn-close aria-label="팝업 닫기">닫기</button>
+        <button type="button" class="popup-btn popup-btn-later" data-popup-btn-later aria-label="24시간 이후에 보기">24시간 이후에 보기</button>
+      </div>
+    </div>
+  </div>
+
   <script src="./js/components.js?v=2" defer></script>
   <script src="./js/review.js?v=1" defer></script>
   <script src="./js/main.js" defer></script>
+  <script src="./js/popup.js" defer></script>
 </body>
 </html>

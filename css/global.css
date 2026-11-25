@@ -832,3 +832,89 @@ main, .site-header, .site-footer { width: min(100%, var(--max-width)); margin-in
   transform: translateY(0);
 }
 .top-button:hover { background: var(--ink); color: var(--paper); }
+
+/* =========================================================
+   팝업
+   ========================================================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.popup-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup-container {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: popupSlideIn 0.3s ease;
+}
+@keyframes popupSlideIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.popup-link {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.popup-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid rgba(37, 37, 37, 0.1);
+}
+.popup-btn {
+  flex: 1;
+  border: 1px solid var(--ink);
+  background: white;
+  color: var(--ink);
+  padding: 10px 12px;
+  font-family: var(--font-korean);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.popup-btn:hover {
+  background: var(--ink);
+  color: white;
+}
+.popup-btn-later {
+  flex: 0.9;
+  border-color: rgba(37, 37, 37, 0.3);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+.popup-btn-later:hover {
+  background: rgba(37, 37, 37, 0.1);
+  color: var(--ink);
+  border-color: rgba(37, 37, 37, 0.3);
+}
