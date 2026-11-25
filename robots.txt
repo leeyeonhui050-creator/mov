@@ -1,4 +1,2 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mov-phi.vercel.app/sitemap.xml
+User-agent: Yeti
+Allow:/
